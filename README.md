@@ -52,6 +52,7 @@ npm run lint:fix
 
 - `cypress/e2e/` – test specs
 - `cypress/reports/` – mochawesome reports from testing
+- `cypress/support/api/` – api classes
 - `cypress/support/commands/` – custom commands
 - `cypress/support/data/` – optional test data
 - `cypress/support/pages/` – page object classes
