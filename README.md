@@ -1,4 +1,4 @@
-# todo-app-tests
+# saucedemo-app-tests
 
 End-to-end tests for the [saucedemo](https://www.saucedemo.com/) app using Cypress and TypeScript.
 
