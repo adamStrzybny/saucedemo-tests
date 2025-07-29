@@ -1,0 +1,36 @@
+{
+  "name": "saucedemo-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "merge-reports": "find cypress/reports -name '*.json' ! -name 'merged.json' -print | xargs mochawesome-merge > cypress/reports/merged.json",
+    "generate-report": "marge cypress/reports/merged.json --reportDir cypress/reports --reportFilename mochawesome.html",
+    "clean-json": "find cypress/reports -name '*.json' ! -name 'merged.json' -delete",
+    "test:report": "npm run cypress:run && npm run merge-reports && npm run generate-report && npm run clean-json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamStrzybny/saucedemo-tests.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adamStrzybny/saucedemo-tests/issues"
+  },
+  "homepage": "https://github.com/adamStrzybny/saucedemo-tests#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.32.0",
+    "cypress": "^14.5.3",
+    "eslint": "^9.32.0",
+    "globals": "^16.3.0",
+    "jiti": "^2.5.1",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.38.0"
+  }
+}
