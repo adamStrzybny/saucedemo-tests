@@ -18,4 +18,14 @@ export class SaucePage {
 
     return this;
   };
+
+  addItemToCart(): this {
+    cy.get(sauceCSS.addToCartBackpack).click();
+    return this;
+  }
+
+  verifyBadgeAmount(amount: number): this {
+    cy.get(sauceCSS.cartBadge).should('have.text', `${amount}`);
+    return this;
+  }
 };
