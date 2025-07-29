@@ -10,5 +10,5 @@
     "lib": ["es6", "dom"],
     "outDir": "dist"
   },
-  "include": ["cypress/**/*.ts"]
+  "include": ["cypress/**/*.ts", "cypress/support/selectors"]
 }
